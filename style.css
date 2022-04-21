@@ -36,7 +36,7 @@ dd {
 }
 
 body {
-  max-height: 100vh;
+  min-height: 100vh;
   background-color: var(--light-grayish-cyan);
   font-family: "Space Mono";
   display: flex;
