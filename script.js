@@ -34,7 +34,7 @@ function changeBg() {
   this.style.backgroundColor = "var(--strong-cyan)";
 }
 
-  function addClass(mq) {
+/*  function addClass(mq) {
     if (mq.matches) {
       console.log("good");
       let i = 0;
@@ -54,9 +54,10 @@ function changeBg() {
       tipButtons[5].removeEventListener("click", resetColors, false);
     }
   }
+
 addClass(mq);
 mq.addListener(addClass);
-
+*/
 
 billTotal.addEventListener("input", function(e) {
 
@@ -153,6 +154,7 @@ function initializeTipButtons() {
     tipButtons[i].addEventListener("click", function() {
       customTip.value = "";
     })
+    tipButtons[i].addEventListener("click", changeBg, false);
   }
   customTip.addEventListener("input", function() {
     if (/^\d*?\d*$/.test(this.value)) {
@@ -172,9 +174,9 @@ function initializeTipButtons() {
       /*if (tipPercentValue > 0) {
         this.value = tipPercentValue.toString();
       }*/
-      console.log("no bueno");
     }
   })
+  customTip.addEventListener("click", resetColors, false);
 }
 
 function calculate() {
