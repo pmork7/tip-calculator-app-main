@@ -36,7 +36,7 @@ dd {
 }
 
 body {
-  min-height: 100vh;
+  max-height: 100vh;
   background-color: var(--light-grayish-cyan);
   font-family: "Space Mono";
   display: flex;
@@ -45,6 +45,12 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 24px;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    min-height: 100vh;
+  }
 }
 
 .calc-container {

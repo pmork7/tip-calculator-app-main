@@ -142,6 +142,7 @@ resetButton.addEventListener("click", function() {
   totalPerPerson.textContent = "$0.00";
   totalPerPersonValue = 0;
   customTip.value = "";
+  resetColors();
 })
 
 function initializeTipButtons() {
