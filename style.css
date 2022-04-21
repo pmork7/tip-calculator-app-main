@@ -21,6 +21,20 @@ dd {
   margin: 0;
 }
 
+.main-message-container {
+  font-size: 0.7rem;
+  line-height: 1.2;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  color: var(--very-dark-cyan);
+}
+
+.main-message {
+  margin-top: 5vh;
+  letter-spacing: 0.4rem
+}
+
 body {
   max-height: 100vh;
   background-color: var(--light-grayish-cyan);
@@ -34,7 +48,7 @@ body {
 }
 
 .calc-container {
-  margin-top: 10vh;
+  margin-top: 5vh;
   margin-bottom: 10vh;
   background-color: var(--white);
   gap: 2rem;
@@ -44,6 +58,14 @@ body {
   border-radius: 1rem;
   grid-template-rows: [row1-start] 6rem [row1-end row2-start] 6rem [row2-end row3-start] 6rem [row3-end];
   grid-template-columns: repeat(2, 20rem);
+}
+
+@media only screen and (max-width: 375px) {
+  .calc-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+  }
 }
 
 /*.input-container {
@@ -60,6 +82,20 @@ body {
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 2;
+}
+
+.bill-message {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.bill-message > h3 {
+  padding-bottom: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--dark-grayish-cyan);
 }
 
 .input-content {
@@ -84,6 +120,8 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .invisible {
@@ -94,7 +132,6 @@ body {
   padding-bottom: 0.3rem;
   font-size: 0.8rem;
   color: var(--dark-grayish-cyan);
-  flex-grow: 1;
 }
 
 #error-message {
@@ -134,6 +171,12 @@ body {
   z-index: 1;
 }
 
+@media only screen and (max-width: 375px) {
+  .input-container > img {
+    bottom: 0.9rem;
+  }
+}
+
 .input-container > input {
   height: 1rem;
   color: var(--grayish-cyan);
@@ -169,7 +212,7 @@ body {
   font-size: 1.1rem;
   background-color: var(--very-dark-cyan);
   background-color: var(--very-dark-cyan);
-  border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+  border-radius: 0.4rem 0.4rem 0.4rem 0.4rem;
   border: 0;
   color: var(--white);
   cursor: pointer;
@@ -181,7 +224,22 @@ body {
   color: var(--very-dark-cyan);
 }
 
+@media only screen and (max-width: 375px) {
+  .tip-buttons {
+    gap: 0.8rem;
+    grid-template-rows: [row1-start] 2.8rem [row1-end row2-start] 2.8rem [row2-end row3-start] 2.8rem [row3-end];
+    grid-template-columns: repeat(2, 9rem);
+    row-gap: 0.5rem;
+    column-gap: 1rem;
+  }
+}
+
+.mobile-tip-buttons:focus-visible {
+  background-color: var(--strong-cyan);
+}
+
 #custom-input {
+  display: block;
   font-size: 1.1rem;
   text-align: right;
   border: 0;
@@ -190,6 +248,10 @@ body {
   background-color: var(--very-light-grayish-cyan);
   caret-color: var(--strong-cyan);
   cursor: pointer;
+}
+
+input::first-letter {
+  letter-spacing: 1rem !important;
 }
 
 #custom-input:focus-visible {
@@ -209,6 +271,12 @@ body {
   display: flex;
   flex-direction: row;
   margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 375px) {
+  .result-content {
+    margin-bottom: 1rem;
+  }
 }
 
 .per-person-message {
@@ -237,6 +305,12 @@ body {
 
 .tip-container {
 
+}
+
+@media only screen and (max-width: 375px) {
+  .tip-container {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .people-container {
@@ -295,6 +369,19 @@ body {
   color: var(--very-dark-cyan);
 }
 
+@media only screen and (max-width: 375px) {
+  .button-container {
+    position: relative;
+    margin: 0;
+  }
+
+  .button-container > button {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    opacity: 1;
+  }
+}
+
 .result-container {
   border-radius: 0.5rem;
   background-color: var(--very-dark-cyan);
@@ -306,4 +393,10 @@ body {
   grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 3;
+}
+
+@media only screen and (max-width: 375px) {
+  .result-container {
+    margin-top: 1rem;
+  }
 }
