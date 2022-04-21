@@ -50,6 +50,7 @@ body {
 @media only screen and (max-width: 375px) {
   body {
     min-height: 100vh;
+    max-height: 120vh;
   }
 }
 
